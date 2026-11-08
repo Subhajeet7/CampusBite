@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CampusBite | Smart College Canteen</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<header class="navbar">
+    <a href="#" class="logo">Campus<span>Bite.</span></a>
+
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#menu">Menu</a>
+        <a href="#about">About</a>
+        <a href="#feedback">Feedback</a>
+    </nav>
+
+    <a href="#order" class="nav-cart">
+        🛒 Cart <span id="cart-count">0</span>
+    </a>
+</header>
+
+<section class="hero" id="home">
+    <div class="hero-content">
+        <span class="tagline">YOUR CAMPUS. YOUR FOOD. YOUR WAY.</span>
+        <h1>Good food.<br><span>No long queues.</span></h1>
+        <p>Discover your favourites, order with ease and make your campus food experience better.</p>
+        <a href="#menu" class="primary-btn">Explore Menu →</a>
+    </div>
+</section>
+
+<section class="features">
+    <div>🍽️ <strong>Variety of Food</strong><small>Something for everyone</small></div>
+    <div>⚡ <strong>Easy Ordering</strong><small>Simple and convenient</small></div>
+    <div>🛍️ <strong>Smart Cart</strong><small>Review your selections</small></div>
+</section>
+
+<main class="container" id="menu">
+
+    <div class="section-heading">
+        <span class="tagline">EXPLORE OUR MENU</span>
+        <h2>Find your favourite food</h2>
+        <p>Fresh choices for every craving.</p>
+    </div>
+
+    <div class="search-box">
+        <span>🔍</span>
+        <input type="text" id="searchInput" placeholder="Search for food...">
+    </div>
+
+    <div class="category-filters" id="categoryFilters">
+        <button class="active" data-category="All">All</button>
+        <button data-category="Burgers & Sandwiches">Burgers & Sandwiches</button>
+        <button data-category="Pizza & Fast Food">Pizza & Fast Food</button>
+        <button data-category="Indian Snacks">Indian Snacks</button>
+        <button data-category="Meals">Meals</button>
+        <button data-category="Non-Veg">Non-Veg</button>
+        <button data-category="Desserts">Desserts</button>
+        <button data-category="Beverages">Beverages</button>
+    </div>
+
+    <div class="food-grid" id="foodGrid"></div>
+
+    <p id="noResults" class="no-results" hidden>No food items found. Try another search.</p>
+
+</main>
+
+<section class="order-section" id="order">
+    <div class="order-container">
+
+        <div class="section-heading">
+            <span class="tagline">YOUR SELECTION</span>
+            <h2>Order Summary</h2>
+            <p>Review your food selections before confirming.</p>
+        </div>
+
+        <div class="order-card">
+
+            <div class="cart-heading">
+                <h3>Your Cart</h3>
+                <span id="summary-count">0 items</span>
+            </div>
+
+            <div id="cart-items">
+                <p class="empty-cart">Your cart is empty. Add some delicious food!</p>
+            </div>
+
+            <div class="bill-details">
+                <div>
+                    <span>Subtotal</span>
+                    <strong id="subtotal">₹0</strong>
+                </div>
+
+                <div>
+                    <span>Delivery Fee</span>
+                    <strong>₹0</strong>
+                </div>
+
+                <div class="grand-total">
+                    <span>Total Amount</span>
+                    <strong id="total">₹0</strong>
+                </div>
+            </div>
+
+            <button class="checkout-btn" id="checkoutBtn" onclick="placeOrder()">
+                Confirm Order →
+            </button>
+
+            <p class="demo-note">Demo prototype — no real payment or canteen order is processed.</p>
+
+            <div id="order-confirmation" class="confirmation" hidden>
+                Your demo order has been placed successfully!
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<section class="about-section" id="about">
+    <div class="about-content">
+        <span class="tagline">ABOUT CAMPUSBITE</span>
+        <h2>A smarter way to enjoy your campus meals.</h2>
+        <p>CampusBite is a website prototype designed to improve the college canteen experience. It aims to make browsing food, selecting items and reviewing orders easier and more convenient.</p>
+    </div>
+</section>
+
+<section class="feedback-section" id="feedback">
+    <span class="tagline">HELP US IMPROVE</span>
+    <h2>Your feedback matters.</h2>
+    <p>Share your experience and help us make CampusBite better.</p>
+
+    <a href="https://docs.google.com/forms/d/e/1FAIpQLScC5b6DaDixPv-3smvrAzb8Xv-mFpcUGrV_3HHB3_7jezPiog/viewform?usp=publish-editor"
+       target="_blank" class="primary-btn">
+       Give Feedback →
+    </a>
+</section>
+
+<footer>
+    <a href="#" class="logo">Campus<span>Bite.</span></a>
+    <p>Making college canteens smarter, faster and more convenient.</p>
+    <small>© 2026 CampusBite. Student Design Thinking Project.</small>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
